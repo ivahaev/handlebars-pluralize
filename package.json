@@ -1,0 +1,32 @@
+{
+  "name": "handlebars-pluralize",
+  "version": "1.0.0",
+  "description": "Handlebars helper for pluralizing any words in any language",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivahaev/handlebars-pluralize.git"
+  },
+  "keywords": [
+    "handlebars",
+    "pluralize",
+    "pluralization",
+    "helper"
+  ],
+  "author": {
+    "name": "Evgeniy Ivakha",
+    "email": "ivahaev@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivahaev/handlebars-pluralize/issues"
+  },
+  "homepage": "https://github.com/ivahaev/handlebars-pluralize#readme",
+  "devDependencies": {
+    "handlebars": "^4.0.10",
+    "mocha": "latest"
+  }
+}
