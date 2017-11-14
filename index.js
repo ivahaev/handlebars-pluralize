@@ -1,11 +1,14 @@
 "use strict";
 
-function plurSelector(value, one = "", few = "", many = "", hash) {
+function plurSelector(value, one, few, many, hash) {
+    one = one || "";
+    few = few || "";
+    many = many || "";
     if (hash[value]) {
         return hash[value];
     }
 
-    let n = Math.abs(value);
+    var n = Math.abs(value);
     n %= 100;
     if (n >= 5 && n <= 20) {
         return many;
@@ -23,10 +26,10 @@ function plurSelector(value, one = "", few = "", many = "", hash) {
     return many;
 };
 
-const numRgx = /#/;
-function pluralize(value, { hash }) {
-    const { one, few, many } = hash;
-    const selected = plurSelector(value, one, few, many, hash);
+var numRgx = /#/;
+function pluralize(value, data) {
+    var hash = data.hash;
+    var selected = plurSelector(value, hash.one, hash.few, hash.many, hash);
     if (selected.match(numRgx)) {
         return selected.replace(numRgx, value);
     }
