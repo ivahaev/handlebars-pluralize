@@ -1,6 +1,6 @@
 "use strict";
 
-const plurSelector = (value, one = "", few = "", many = "", hash) => {
+function plurSelector(value, one = "", few = "", many = "", hash) {
     if (hash[value]) {
         return hash[value];
     }
@@ -24,7 +24,7 @@ const plurSelector = (value, one = "", few = "", many = "", hash) => {
 };
 
 const numRgx = /#/;
-const pluralize = (value, { hash }) => {
+function pluralize(value, { hash }) {
     const { one, few, many } = hash;
     const selected = plurSelector(value, one, few, many, hash);
     if (selected.match(numRgx)) {
