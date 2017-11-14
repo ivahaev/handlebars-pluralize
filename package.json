@@ -1,6 +1,6 @@
 {
   "name": "handlebars-pluralize",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Handlebars helper for pluralizing any words in any language",
   "main": "index.js",
   "scripts": {
